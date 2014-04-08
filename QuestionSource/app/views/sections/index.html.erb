@@ -1,0 +1,20 @@
+<h1>View All Question Sections</h1>
+
+ 
+<div class="col">
+    <div class="span12">
+<table>
+<% @sections.each do |section| %>
+  <tr>
+    <td><h2><%= section.name %></h2></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><%= link_to 'See Active Questions', section %></td>
+  </tr>
+<% end %>
+</table>
+ </div>
+  </div>
+
+

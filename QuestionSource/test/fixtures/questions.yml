@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  desc: MyText
+  submitted: 2014-04-01
+  score: 1
+  section: 
+
+two:
+  name: MyString
+  desc: MyText
+  submitted: 2014-04-01
+  score: 1
+  section: 

@@ -1,0 +1,30 @@
+<h1>Question in <%= @section.name %></h1>
+
+<p>
+  <b>Name:</b>
+  <%= @question.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @question.desc %>
+</p>
+
+<p>
+  <b>Submitted:</b>
+  <%= @question.submitted %>
+</p>
+
+<p>
+  <b>Score:</b>
+  <%= @question.score %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%= @question.section %>
+</p>
+
+
+<%= link_to 'Edit', edit_section_question_path(@section, @question) %> |
+<%= link_to 'Back', section_questions_path(@section) %>

@@ -1,0 +1,18 @@
+<h1>Questions in <%= @section.name %></h1>
+	
+<table>
+<tr>
+<th>Question</th>
+</tr><% for question in @questions %><tr>
+<td><%= question.name %></td>
+<td><%= link_to 'Show', section_question_path(@section, question) %></td>
+<td><%= link_to 'Edit', edit_section_question_path(@section, question) %></td>
+<td><%= link_to 'Destroy', section_question_path(@section, question), :confirm =>'Are you sure?', :method => :delete %></td>
+</tr>
+
+<% end %>
+</table>
+<br />
+		  
+<%= link_to 'New Question', new_section_question_path(@section) %>
+<%= link_to 'Back to Section', @section %>

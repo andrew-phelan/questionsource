@@ -1,0 +1,14 @@
+<p><b>Section:</b>
+<%= @section.name %></p>
+		  
+<h2>Questions</h2>
+<% @section.questions.each do |question| %>
+<p>
+<b>Question Title:</b>
+<%= question.name %><%= link_to @section.question.%>
+</p>
+	
+<% end %>
+
+<%= link_to 'Show Questions', section_questions_path(@section) %>
+

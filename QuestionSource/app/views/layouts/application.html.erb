@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QuestionSource</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<body>
+	<div id="header">
+		<h1>Question Source A Place For Answers</h1>
+	</div>
+	<div id="menu">
+		<div id="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/sections">Sections</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+				<li><%= link_to 'Login', new_user_session_path %></li>
+				<li><%= link_to 'Register', new_user_registration_path %>
+				<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+
+			</ul>
+		</div>
+
+		</div>
+		<div id="container">
+			<div id="content">
+				<p class="notice"><%= flash[:notice] %></p>
+				<%= yield %>
+				
+
+			</div>
+			<div id="first-column">
+				
+			</div>
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+
+			</div>
+		</div>
+
+<div id="footer">
+	<h6 class="footertext">&copy; Question Source &trade; 2014</h6>
+</div>
+
+</body>
+</html>

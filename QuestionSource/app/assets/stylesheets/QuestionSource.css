@@ -1,0 +1,103 @@
+h1, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+div#container {
+    position: relative;
+    min-height: 850px;
+    max-width: 1000px;
+    min-width: 750px;
+    margin: auto;
+}
+div#first-column {
+	margin: 3px 3px 3px 3px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 279px;
+    margin: 3px;
+}
+div#first-column {
+    left: 710px;
+}
+div#content {
+	left: 0;
+	padding: 3px;
+    margin: 3px 3px 3px 5px;
+    min-height: 850px;
+    width: 700px;
+}
+div#header,
+div#footer,
+div#menu {
+    background: rgb(20, 20, 20);
+    padding: 3px;
+    max-width: 994px;
+    min-width: 744px;
+    margin: auto;
+}
+
+div#header {
+ 	border-top-left-radius:25px;
+ 	border-top-right-radius:25px;
+		
+}
+
+div#menu {
+    border-bottom: none;
+    width: 1024px;
+    height: 28px;
+}
+div#header {
+    border-bottom: none;
+    width: 1024px;
+    height: 170px;
+}
+div#footer {
+    border-top: none;
+}
+
+div.box {
+	margin: 0px 0px 30px 5px;
+	padding: 5px;
+	height: 260px;
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+
+}
+
+
+
+/* ------------------------- */
+ #navbar ul          
+ {
+     margin: 0;         
+     padding: 5px;         
+     list-style-type: none;         
+     text-align: left;  
+     font-size: 17px;      
+     background-color: #333;         
+ }  
+ 
+ #navbar ul li           
+ {
+     display: inline;
+       
+ }  
+ 
+ #navbar ul li a          
+ {
+     text-decoration: none;         
+     padding: .2em 1em;         
+     color: #fff;         
+     background-color: #333;         
+     }  
+     
+#navbar ul li a:hover          
+{
+    color: navy;
+    background-color: azure;         
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+       
+}
