@@ -19,12 +19,28 @@
   <b>Score:</b>
   <%= @question.score %>
 </p>
-
 <p>
-  <b>Section:</b>
-  <%= @question.section %>
+	<%= submit_tag 1, :value=>"Up Vote" %> &nbsp;
+	<%= submit_tag 2, :value=>"Down Vote" %>
 </p>
+<p>
+  <b>Submitted by:</b>
+  <%= @question.user %>
+</p>
+<h2>Answers in <%= @question.name %></h2>
+<% @question.answers.each do |answer| %>
+<p>
+<b>Answer Details</b>
+<%= answer.desc %> &nbsp;<%= link_to 'View Answer', section_question_answer_path(@section, @question, answer)%>
+</p>
+	
+<% end %>
 
-
+<% if user_signed_in? %>
+<%= link_to 'Add An Answer', new_section_question_answer_path(@section, @question)%>
+<% user = current_user.email%>
+<% if @question.user == user %>
 <%= link_to 'Edit', edit_section_question_path(@section, @question) %> |
 <%= link_to 'Back', section_questions_path(@section) %>
+<% end %>
+<% end %>

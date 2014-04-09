@@ -5,10 +5,9 @@
 <% @section.questions.each do |question| %>
 <p>
 <b>Question Title:</b>
-<%= question.name %><%= link_to @section.question.%>
+<%= question.name %> &nbsp;<%= link_to 'View Question', section_question_path(@section, question)%>
 </p>
 	
 <% end %>
-
-<%= link_to 'Show Questions', section_questions_path(@section) %>
+<%= link_to 'Ask A New Question', new_section_question_path(@section)%>
 

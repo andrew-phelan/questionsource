@@ -12,26 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :desc %><br />
+    <%= f.label "Your Answer" %><br />
     <%= f.text_area :desc %>
   </div>
   <div class="field">
-    <%= f.label :submitted %><br />
-    <%= f.date_select :submitted %>
+    <%= f.date_select :submitted, { :discard_day => true, :discard_month => true, :discard_year => true }%>
   </div>
   <div class="field">
-    <%= f.label :score %><br />
-    <%= f.number_field :score %>
+    <%= f.hidden_field :score, :value => 10 %>
   </div>
+  <% if user_signed_in? %>
   <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= f.hidden_field :user, :value => current_user.email%>
   </div>
-  <div class="field">
-    <%= f.label :question %><br />
-    <%= f.text_field :question %>
-  </div>
+  <% end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit Your Answer"%>
   </div>
 <% end %>

@@ -10,9 +10,12 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
+ 
     @section = Section.find(params[:section_id])
     @question = @section.questions.find(params[:id])
-
+    @input1 = params[:submit_tag]
+    @vote = Vote.runcheck(@input1)
+    @question.score = @question.score + @vote
   end
 
   # GET /questions/new
