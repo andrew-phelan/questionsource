@@ -47,8 +47,8 @@ class QuestionsController < ApplicationController
   # PUT /questions/1.json
   def update
     @section = Section.find(params[:section_id])
-    @question = Question.find(params[:question])
-    if @item.update_attributes(params[:question])
+    @question = Question.find(params[:id])
+    if @question.update_attributes(params[:question])
       redirect_to section_question_url(@section, @question)
     else
       render :action=>"edit"
